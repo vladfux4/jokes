@@ -11,14 +11,14 @@ int main() {
     treeV.insert(vector<int>({0,1,2,3}));
     treeV.insert(vector<int>({1,2,3,4}));
 
-    treeS.insert("LOL");
-    treeS.insert("ASSDSAD");
-
     cout << treeV.search(vector<int>({0,1,2,3})) << endl;
     cout << treeV.search(vector<int>({1,2,3})) << endl;
 
+    treeS.insert("LOL");
+    treeS.insert("ASSDSAD");
+
     cout << treeS.search("AS") << endl;
-    cout << treeS.search("LOL") << endl;
+    cout << treeS.search("ASSDSAD") << endl;
 
     return 0;
 }
