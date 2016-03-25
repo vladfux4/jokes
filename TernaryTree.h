@@ -19,6 +19,6 @@ public:
     IdType search(const ArrayType array);
 };
 
-#include "TernaryTree.tpp"
+#include "TernaryTree.cpp"
 
 #endif //JOKE_TERNARYTREE_H

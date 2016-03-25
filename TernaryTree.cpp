@@ -2,7 +2,7 @@
 // Created by vladfux on 11/8/15.
 //
 
-#include "TernaryTree.h"
+#ifdef JOKE_TERNARYTREE_H
 
 template<class ArrayType, typename IdType>
 void TernaryTree<ArrayType,IdType>::insert(const ArrayType array) {
@@ -47,3 +47,4 @@ IdType TernaryTree<ArrayType, IdType>::search(const ArrayType array) {
     }
     return 0;
 }
+#endif

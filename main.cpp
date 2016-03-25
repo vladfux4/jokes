@@ -19,6 +19,6 @@ int main() {
 
     cout << treeS.search("AS") << endl;
     cout << treeS.search("ASSDSAD") << endl;
-
+    treeS.insert("11");
     return 0;
 }
