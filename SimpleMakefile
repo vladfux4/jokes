@@ -1,0 +1,25 @@
+EXECUTABLE=test_module
+CC=gcc
+CFLAGS=-c -Wall
+LDFLAGS=
+
+OBJ_DIR=obj
+
+SRC=main.c
+
+OBJ=$(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
+
+all: $(SRC) $(EXECUTABLE)
+
+clean:
+	rm -rf $(OBJ_DIR)
+	rm -f $(EXECUTABLE)
+
+$(EXECUTABLE): create_build_dir $(OBJ)
+	$(CC) $(LDFLAGS) $(OBJ) -o $@
+
+$(OBJ_DIR)/%.o: %.c
+	$(CC) $(CFLAGS) $< -o $@
+
+create_build_dir:
+	mkdir -p $(OBJ_DIR)
